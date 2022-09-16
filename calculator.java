@@ -37,12 +37,13 @@ public class calculator {
 
             if (check > 0 && op == 'h' || op == 'H') {
                 for (int a = 0, i = 0; a < check; a++, i += 4) {
-                    System.out.println(history.get(i) + " " + history.get(i + 1) + " " + history.get(i + 2) + " = "
-                            + history.get(i + 3));
+                    System.out
+                            .println("\n" + history.get(i) + " " + history.get(i + 1) + " " + history.get(i + 2) + " = "
+                                    + history.get(i + 3));
 
                 }
 
-                System.out.println("Enter the operator:  (C for clear, E for exit, H for history)");
+                System.out.println("\nEnter the operator:  (C for clear, E for exit, H for history)");
                 op = input.next().charAt(0);
             } else if (op == 'c' || op == 'C') {
                 System.out.print("\033[H\033[2J");
