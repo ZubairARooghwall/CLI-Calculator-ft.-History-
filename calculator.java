@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Vector;
 
 public class calculator{
     public static void main(String[] args){
@@ -10,6 +11,9 @@ public class calculator{
         double num2;
         double result;
         int check = 0;
+        int historycounter = 0;
+        Vector history = new Vector();
+
 
         while(true){
             if(check==0){
@@ -38,12 +42,16 @@ public class calculator{
             }
 
             System.out.println("Result: " + result);
-            
 
 
 
 
 
+
+
+            check++;
+            historycounter++;
+            num1 = result;
 
 }//while (true)
 }//public main
