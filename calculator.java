@@ -83,7 +83,6 @@ public class calculator {
             history.addElement(result);
 
             check++;
-            historycounter++;
             num1 = result;
 
         } // while (true)
