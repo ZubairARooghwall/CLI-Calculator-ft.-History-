@@ -6,10 +6,10 @@ public class calculator{
         
         Scanner input = new Scanner(System.in);
         
-        double num1;
+        double num1 = 0;
         char op;
-        double num2;
-        double result;
+        double num2  = 0;
+        double result  = 0;
         int check = 0;
         int historycounter = 0;
         Vector history = new Vector();
@@ -21,7 +21,14 @@ public class calculator{
                 num1 = input.nextDouble();
             }
             while(true){
+                if(check==0){ 
             System.out.println("Enter the operator: ");
+        }
+
+            else{
+                System.out.println("Enter the operator:  (C for clear, E for exit, H for history)");
+        }
+
             op = input.next().charAt(0);
             
             if(op == '+' || op == '-' || op == '*' || op == '/' || op == 'e' || op == 'E' || op == 'H' || op == 'h' || op == 'c' || op == 'C'){
@@ -31,14 +38,34 @@ public class calculator{
                 System.out.println("Enter the right input: ");
             }
         }
+
+        if(check > 0 && op == 'h' || op == 'H'){
+
+
+
+
+        }
+
             System.out.println("Enter the second number: ");
             num2 = input.nextDouble();
         
             switch(op){
-                case '+' --> result = num1 + num2;
-                case '-' --> result = num1 - num2;
-                case '*' --> result = num1 * num2;
-                case '/' --> result = num1 / num2;
+                case '+' : 
+                result = num1 + num2; 
+                break;
+
+                case '-' : 
+                result = num1 - num2; 
+                break;
+
+                case '*' : 
+                result = num1 * num2; 
+                break;
+
+                case '/' : 
+                result = num1 / num2; 
+                break;
+                
             }
 
             System.out.println("Result: " + result);
@@ -47,6 +74,11 @@ public class calculator{
 
 
 
+
+        history.addElement(num1);
+        history.addElement(op);
+        history.addElement(num2);
+        history.addElement(result);
 
 
             check++;
