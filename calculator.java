@@ -11,7 +11,6 @@ public class calculator {
         double num2 = 0;
         double result = 0;
         int check = 0;
-        int historycounter = 0;
         Vector history = new Vector();
 
         while (true) {
