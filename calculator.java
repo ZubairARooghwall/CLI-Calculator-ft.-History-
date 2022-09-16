@@ -47,8 +47,8 @@ public class calculator {
             } else if (op == 'c' || op == 'C') {
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
-                System.out.println("Enter the operator:  (C for clear, E for exit, H for history)");
-                op = input.next().charAt(0);
+                check = 0;
+                continue;
             } else if (op == 'E' || op == 'e') {
                 break;
             }
@@ -74,8 +74,8 @@ public class calculator {
                     break;
 
             }
-
-            System.out.println("Result: " + result);
+            System.out.println("Result: ");
+            System.out.printf("%.0f %c %.0f = %.0f\n\n", num1, op, num2, result);
 
             history.addElement(num1);
             history.addElement(op);
