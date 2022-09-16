@@ -22,9 +22,7 @@ public class calculator {
             while (true) {
                 if (check == 0) {
                     System.out.println("Enter the operator: ");
-                }
-
-                else {
+                } else {
                     System.out.println("Enter the operator:  (C for clear, E for exit, H for history)");
                 }
 
@@ -42,8 +40,18 @@ public class calculator {
                 for (int a = 0, i = 0; a < check; a++, i += 4) {
                     System.out.println(history.get(i) + " " + history.get(i + 1) + " " + history.get(i + 2) + " = "
                             + history.get(i + 3));
+
                 }
 
+                System.out.println("Enter the operator:  (C for clear, E for exit, H for history)");
+                op = input.next().charAt(0);
+            } else if (op == 'c' || op == 'C') {
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+                System.out.println("Enter the operator:  (C for clear, E for exit, H for history)");
+                op = input.next().charAt(0);
+            } else if (op == 'E' || op == 'e') {
+                break;
             }
 
             System.out.println("Enter the second number: ");
