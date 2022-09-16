@@ -29,15 +29,22 @@ public class calculator{
         }
             System.out.println("Enter the second number: ");
             num2 = input.nextDouble();
+        
+            switch(op){
+                case '+' --> result = num1 + num2;
+                case '-' --> result = num1 - num2;
+                case '*' --> result = num1 * num2;
+                case '/' --> result = num1 / num2;
+            }
+
+            System.out.println("Result: " + result);
+            
 
 
 
 
 
 
-        }
-
-
-
-    }
-}
+}//while (true)
+}//public main
+}//public class
