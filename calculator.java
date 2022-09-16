@@ -38,7 +38,7 @@ public class calculator {
             if (check > 0 && op == 'h' || op == 'H') {
                 for (int a = 0, i = 0; a < check; a++, i += 4) {
                     System.out
-                            .println("\n" + history.get(i) + " " + history.get(i + 1) + " " + history.get(i + 2) + " = "
+                            .println(history.get(i) + " " + history.get(i + 1) + " " + history.get(i + 2) + " = "
                                     + history.get(i + 3));
 
                 }
