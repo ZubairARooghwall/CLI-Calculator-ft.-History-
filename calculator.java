@@ -76,7 +76,7 @@ public class calculator {
 
             }
             System.out.println("Result: ");
-            System.out.printf("%.0f %c %.0f = %.0f\n\n", num1, op, num2, result);
+            System.out.printf("%.2f %c %.2f = %.2f\n\n", num1, op, num2, result);
 
             history.addElement(num1);
             history.addElement(op);
